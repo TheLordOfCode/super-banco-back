@@ -1,0 +1,1 @@
+insert into incremento (fechaInicio, fechaFin, montoInicial, montoFinal) values (:fechaInicio, :fechaFin, :montoInicial, :montoFinal)

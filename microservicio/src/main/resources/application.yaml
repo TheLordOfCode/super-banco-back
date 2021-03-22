@@ -1,0 +1,21 @@
+jasypt:
+  encryptor:
+    password: ${JASYPT_KEY}
+    algorithm: PBEWithMD5AndDES
+
+server:
+  port: 8080
+  servlet:
+    context-path: /super-banco
+    session:
+      timeout: 21600s
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    jdbcUrl: jdbc:mysql://localhost:3306/superbanco?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: user
+    password: ENC(RuO2RvaInD0NQUq7G1csMJFOvgSmClvK)
+    hikari:
+      poolName: pool
