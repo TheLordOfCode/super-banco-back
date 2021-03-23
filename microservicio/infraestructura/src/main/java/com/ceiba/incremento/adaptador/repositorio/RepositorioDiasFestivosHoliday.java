@@ -16,7 +16,6 @@ public class RepositorioDiasFestivosHoliday implements RepositorioDiasFestivos {
             HolidayUtil diasFestivos = new HolidayUtil(fechaAValidar.getYear());
             boolean esFestivo = diasFestivos.isHoliday(fechaAValidar.getMonthValue(), fechaAValidar.getDayOfMonth());
             if (esFestivo) {
-                System.out.println(fechaAValidar.toString());
                 contarFestivos++;
             }
         }

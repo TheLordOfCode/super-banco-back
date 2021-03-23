@@ -20,8 +20,8 @@ public class Incremento {
     private static final String LA_FECHA_FIN_ES_DESPUES_DE_LA_FECHA_INICIO = "Se debe ingresar una fecha final mayor a la fecha inicio";
     private static final String LAPSO_DE_TIEMPO_MENOR_QUINCE_DIAS = "El lapso de tiempo entre las fechas debe ser menor o igual a quince dias";
     private static final String SE_DEBE_INGRESAR_EL_MONTO_INICIAL = "Se debe ingresar el monto de dinero inicial";
-    private static final String El_MONTO_MAXIMO_ES = "El monto máximo debe ser de 5000000";
-    private static final String El_MONTO_MINIMO_ES = "El monto mínimo debe ser de 10000";
+    private static final String VALOR_MONTO_MAXIMO = "El monto máximo debe ser de 5000000";
+    private static final String VALOR_MONTO_MINIMO = "El monto mínimo debe ser de 10000";
 
     private static final int MONTO_MAXIMO = 5000000;
     private static final int MONTO_MINIMO = 10000;
@@ -41,8 +41,8 @@ public class Incremento {
         validarObligatorio(fechaInicio, SE_DEBE_INGRESAR_LA_FECHA_INICIO);
         validarObligatorio(fechaFin, SE_DEBE_INGRESAR_LA_FECHA_FIN);
         validarObligatorio(montoInicial, SE_DEBE_INGRESAR_EL_MONTO_INICIAL);
-        validarTopeMaximo(montoInicial, MONTO_MAXIMO, El_MONTO_MAXIMO_ES);
-        validarTopeMinimo(montoInicial, MONTO_MINIMO, El_MONTO_MINIMO_ES);
+        validarTopeMaximo(montoInicial, MONTO_MAXIMO, VALOR_MONTO_MAXIMO);
+        validarTopeMinimo(montoInicial, MONTO_MINIMO, VALOR_MONTO_MINIMO);
 
         LocalDate fechaInicial = obtenerLocalDateDesdeUnString(fechaInicio);
         LocalDate fechaFinal = obtenerLocalDateDesdeUnString(fechaFin);
