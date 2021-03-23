@@ -26,8 +26,7 @@ public class CalcularMontoFinal {
         int diasFestivos = 0;
         diasFinchos = contarDiasFinSemana(fechaInicial, diasLapso);
         diasFestivos = this.repositorioDiasFestivos.contarFestivos(fechaInicial, diasLapso);
-        double montoFinal = montoInicial * (Math.pow((1 + INTERES), (diasLapso - diasFinchos - diasFestivos)) + Math.pow((1 + INTERES_FIN_DE_SEMANA), (diasFinchos - diasFestivos)));
-        return montoFinal;
+        return  montoInicial * (Math.pow((1 + INTERES), (diasLapso - diasFinchos - diasFestivos)) + Math.pow((1 + INTERES_FIN_DE_SEMANA), (diasFinchos - diasFestivos)));
     }
 
     private int contarDiasFinSemana(LocalDate fechaInicial, int diasLapso) {
