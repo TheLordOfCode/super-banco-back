@@ -11,7 +11,7 @@ public interface MapperResult {
         Timestamp fecha = resultSet.getTimestamp(label);
         LocalDate resultado = null;
         if (!resultSet.wasNull()) {
-            resultado = fecha.toLocalDateTime().toLocalDate();
+            resultado = fecha.toLocalDateTime().toLocalDate().plusDays(1);
         }
         return resultado;
     } 

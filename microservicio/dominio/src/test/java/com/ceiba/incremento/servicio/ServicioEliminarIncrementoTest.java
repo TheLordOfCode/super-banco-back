@@ -12,7 +12,7 @@ public class ServicioEliminarIncrementoTest {
     private static final String EL_INCREMENTO_A_ELIMINAR_NO_EXISTE = "El incremento a eliminar no existe ";
 
     @Test
-    public void validarEliminarIncrementoTest(){
+    public void validarEliminarIncrementoTest() {
         // arrange
         Incremento incremento = new IncrementoTestDataBuilder().conId(1L).build();
         RepositorioIncremento repositorioIncremento = Mockito.mock(RepositorioIncremento.class);
@@ -24,8 +24,9 @@ public class ServicioEliminarIncrementoTest {
         Mockito.verify(repositorioIncremento).eliminar(incremento.getId());
 
     }
+
     @Test
-    public void validarExistenciaPreviaIncrementoTest(){
+    public void validarExistenciaPreviaIncrementoTest() {
         // arrange
         Incremento incremento = new IncrementoTestDataBuilder().conId(1L).build();
         RepositorioIncremento repositorioIncremento = Mockito.mock(RepositorioIncremento.class);

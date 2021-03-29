@@ -10,13 +10,13 @@ public class ServicioCrearIncremento {
 
     public ServicioCrearIncremento(RepositorioIncremento repositorioIncremento, RepositorioDiasFestivos repositorioDiasFestivos) {
         this.repositorioIncremento = repositorioIncremento;
-
         this.calcularMontoFinal = new CalcularMontoFinal(repositorioDiasFestivos);
     }
 
     public Long ejecutar(Incremento incremento) {
         double montoFinal = this.calcularMontoFinal.calcular(incremento.getFechaInicio(), incremento.getFechaFin(), incremento.getMontoInicial());
         incremento.setMontoFinal(montoFinal);
+
         return this.repositorioIncremento.crear(incremento);
     }
 

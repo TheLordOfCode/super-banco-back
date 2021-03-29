@@ -41,7 +41,7 @@ public class ComandoControladoIncrementoTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor': 201}"));
     }
-
+    //realizar consulta para verificar que el flujo se ejecuto correctamente manejo de assert
     @Test
     public void actualizar() throws Exception {
         // arrange
