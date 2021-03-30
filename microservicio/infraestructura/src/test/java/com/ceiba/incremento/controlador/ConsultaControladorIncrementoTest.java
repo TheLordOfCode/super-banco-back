@@ -40,7 +40,7 @@ public class ConsultaControladorIncrementoTest {
     public void ObtenerId() throws Exception {
         // arrange
         int id = 200;
-        Double montoInicial = 5000.0;
+        Double montoInicial = 50000.0;
         // act - assert
         mocMvc.perform(get("/incrementos/" + id)
                 .contentType(MediaType.APPLICATION_JSON))
