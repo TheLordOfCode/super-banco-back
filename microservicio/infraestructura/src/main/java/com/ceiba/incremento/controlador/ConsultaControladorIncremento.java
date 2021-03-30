@@ -34,7 +34,7 @@ public class ConsultaControladorIncremento {
 
     @GetMapping(value = "/{id}")
     @ApiOperation("Obtener Por Id")
-    public DtoIncremento obtenerPorId( @PathVariable Long id) {
+    public DtoIncremento obtenerPorId(@PathVariable Long id) {
         return this.manejadorObtenerIncremento.ejecutar(id);
     }
 }

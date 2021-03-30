@@ -1,12 +1,8 @@
 package com.ceiba.incremento.servicio;
 
 import com.ceiba.incremento.modelo.entidad.Incremento;
-import com.ceiba.incremento.puerto.repositorio.RepositorioDiasFestivos;
-import com.ceiba.incremento.servicio.testdatabuilder.IncrementoTestDataBuilder;
 import org.junit.Test;
 import org.mockito.Mockito;
-
-import java.time.LocalDate;
 
 public class CalcularMontoFinalTest {
     private static final String FECHA_INICIAL = "2020-02-03";

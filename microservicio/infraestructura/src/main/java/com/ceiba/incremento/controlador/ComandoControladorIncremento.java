@@ -1,6 +1,5 @@
 package com.ceiba.incremento.controlador;
 
-import com.ceiba.ComandoRespuesta;
 import com.ceiba.incremento.comando.ComandoIncremento;
 import com.ceiba.incremento.comando.manejador.ManejadorActualizarIncremento;
 import com.ceiba.incremento.comando.manejador.ManejadorCrearIncremento;

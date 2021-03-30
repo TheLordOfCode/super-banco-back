@@ -19,6 +19,6 @@ public interface DaoIncremento {
      * @return el incremento
      */
 
-   DtoIncremento obtenerPorId(Long id);
+    DtoIncremento obtenerPorId(Long id);
 
 }

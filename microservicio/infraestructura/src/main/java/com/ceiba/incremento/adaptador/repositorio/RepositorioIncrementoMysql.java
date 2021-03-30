@@ -1,6 +1,5 @@
 package com.ceiba.incremento.adaptador.repositorio;
 
-import com.ceiba.incremento.adaptador.dao.MapeoIncremento;
 import com.ceiba.incremento.modelo.dto.DtoIncremento;
 import com.ceiba.incremento.modelo.entidad.Incremento;
 import com.ceiba.incremento.puerto.repositorio.RepositorioIncremento;
@@ -29,8 +28,8 @@ public class RepositorioIncrementoMysql implements RepositorioIncremento {
     @Override
     public DtoIncremento crear(Incremento incremento) {
         Long id = this.customNamedParameterJdbcTemplate.crear(incremento, sqlCrear);
-         incremento.setId(id);
-         return new DtoIncremento(incremento.getId(), incremento.getFechaInicio(), incremento.getFechaFin(), incremento.getMontoInicial(), incremento.getMontoFinal());
+        incremento.setId(id);
+        return new DtoIncremento(incremento.getId(), incremento.getFechaInicio(), incremento.getFechaFin(), incremento.getMontoInicial(), incremento.getMontoFinal());
     }
 
     @Override

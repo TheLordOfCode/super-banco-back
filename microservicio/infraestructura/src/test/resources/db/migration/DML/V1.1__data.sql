@@ -1,1 +1,1 @@
-insert into incremento(id, fechaInicio,fechaFin,montoInicial, montoFinal) values(200, '2021-03-06','2021-03-19',5000.0, 6000.0)
+insert into incremento(id, fechaInicio,fechaFin,montoInicial, montoFinal) values(200, '2021-03-06','2021-03-19',50000.0, 6000.0)

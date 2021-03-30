@@ -1,7 +1,6 @@
 package com.ceiba.incremento.adaptador.dao;
 
 import com.ceiba.incremento.modelo.dto.DtoIncremento;
-import com.ceiba.incremento.modelo.entidad.Incremento;
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import org.springframework.jdbc.core.RowMapper;
 

@@ -24,8 +24,9 @@ public class ServicioActualizarIncrementoTest {
         // act - assert
         BasePrueba.assertThrows(() -> servicioActualizarIncremento.ejecutar(incremento), IncrementoExcepcion.class, EL_INCREMENTO_QUE_INTENTA_ACTUALIZAR_NO_EXISTE);
     }
+
     @Test
-    public void validarActualizarIncrementoTest(){
+    public void validarActualizarIncrementoTest() {
         Incremento incremento = new IncrementoTestDataBuilder().conId(1L).build();
         RepositorioIncremento repositorioIncremento = Mockito.mock(RepositorioIncremento.class);
         RepositorioDiasFestivos repositorioDiasFestivos = Mockito.mock(RepositorioDiasFestivos.class);
