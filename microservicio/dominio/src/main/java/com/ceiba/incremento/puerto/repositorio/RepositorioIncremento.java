@@ -1,5 +1,6 @@
 package com.ceiba.incremento.puerto.repositorio;
 
+import com.ceiba.incremento.modelo.dto.DtoIncremento;
 import com.ceiba.incremento.modelo.entidad.Incremento;
 
 
@@ -10,7 +11,7 @@ public interface RepositorioIncremento {
      * @param incremento
      * @return el id generado
      */
-    Long crear(Incremento incremento);
+    DtoIncremento crear(Incremento incremento);
 
     /**
      * Permite actualizar un incremento

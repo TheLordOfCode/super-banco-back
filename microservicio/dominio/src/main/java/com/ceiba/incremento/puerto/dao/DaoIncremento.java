@@ -13,4 +13,12 @@ public interface DaoIncremento {
 
     List<DtoIncremento> listar();
 
+    /**
+     * Permite obtener un incremento por id
+     *
+     * @return el incremento
+     */
+
+   DtoIncremento obtenerPorId(Long id);
+
 }

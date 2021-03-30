@@ -35,4 +35,19 @@ public class ConsultaControladorIncrementoTest {
                 .andDo(print())
                 .andExpect(jsonPath("$[0].id", is(200)));
     }
+
+    @Test
+    public void ObtenerId() throws Exception {
+        // arrange
+        int id = 200;
+        Double montoInicial = 5000.0;
+        // act - assert
+        mocMvc.perform(get("/incrementos/"+id)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andDo(print())
+                .andExpect(jsonPath("$.id", is(id)))
+                .andExpect(jsonPath("$.montoInicial", is(montoInicial)));
+    }
+
 }

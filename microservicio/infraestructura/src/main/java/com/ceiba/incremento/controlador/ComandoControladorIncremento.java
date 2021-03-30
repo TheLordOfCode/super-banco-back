@@ -5,6 +5,7 @@ import com.ceiba.incremento.comando.ComandoIncremento;
 import com.ceiba.incremento.comando.manejador.ManejadorActualizarIncremento;
 import com.ceiba.incremento.comando.manejador.ManejadorCrearIncremento;
 import com.ceiba.incremento.comando.manejador.ManejadorEliminarIncremento;
+import com.ceiba.incremento.modelo.dto.DtoIncremento;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class ComandoControladorIncremento {
     @PostMapping
     @ApiOperation("Crear Incremento")
 
-    public ComandoRespuesta<Long> crear(@RequestBody ComandoIncremento comandoIncremento) {
+    public DtoIncremento crear(@RequestBody ComandoIncremento comandoIncremento) {
         return manejadorCrearIncremento.ejecutar(comandoIncremento);
     }
 

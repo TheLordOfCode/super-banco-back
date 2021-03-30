@@ -50,7 +50,7 @@ public class Incremento {
         validarMenor(fechaInicial, fechaFinal, LA_FECHA_FIN_ES_DESPUES_DE_LA_FECHA_INICIO);
         validarLapsoTiempo(fechaInicial, fechaFinal, CANTIDAD_MAXIMA_DIAS, LAPSO_DE_TIEMPO_MENOR_QUINCE_DIAS);
 
-
+        this.id = id;
         this.fechaInicio = fechaInicial;
         this.fechaFin = fechaFinal;
         this.montoInicial = montoInicial;

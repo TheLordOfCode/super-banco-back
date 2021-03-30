@@ -1,5 +1,7 @@
 package com.ceiba.incremento.adaptador.repositorio;
 
+import com.ceiba.incremento.adaptador.dao.MapeoIncremento;
+import com.ceiba.incremento.modelo.dto.DtoIncremento;
 import com.ceiba.incremento.modelo.entidad.Incremento;
 import com.ceiba.incremento.puerto.repositorio.RepositorioIncremento;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
@@ -20,14 +22,15 @@ public class RepositorioIncrementoMysql implements RepositorioIncremento {
     private static String sqlExistePorId;
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-
     public RepositorioIncrementoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
 
     @Override
-    public Long crear(Incremento incremento) {
-        return this.customNamedParameterJdbcTemplate.crear(incremento, sqlCrear);
+    public DtoIncremento crear(Incremento incremento) {
+        Long id = this.customNamedParameterJdbcTemplate.crear(incremento, sqlCrear);
+         incremento.setId(id);
+         return new DtoIncremento(incremento.getId(), incremento.getFechaInicio(), incremento.getFechaFin(), incremento.getMontoInicial(), incremento.getMontoFinal());
     }
 
     @Override

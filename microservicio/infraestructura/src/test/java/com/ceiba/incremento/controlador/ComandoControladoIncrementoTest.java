@@ -39,8 +39,9 @@ public class ComandoControladoIncrementoTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(incremento)))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{'valor': 201}"));
+                .andExpect(content().json("{'id': 201, 'fechaInicio': '2020-02-12', 'fechaFin': '2020-02-14', 'montoInicial': 50000.0 , 'montoFinal': 105125.0 }"));
     }
+
     //realizar consulta para verificar que el flujo se ejecuto correctamente manejo de assert
     @Test
     public void actualizar() throws Exception {

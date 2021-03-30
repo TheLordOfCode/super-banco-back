@@ -1,5 +1,6 @@
 package com.ceiba.incremento.servicio;
 
+import com.ceiba.incremento.modelo.dto.DtoIncremento;
 import com.ceiba.incremento.modelo.entidad.Incremento;
 import com.ceiba.incremento.puerto.repositorio.RepositorioDiasFestivos;
 import com.ceiba.incremento.puerto.repositorio.RepositorioIncremento;
@@ -13,7 +14,7 @@ public class ServicioCrearIncremento {
         this.calcularMontoFinal = new CalcularMontoFinal(repositorioDiasFestivos);
     }
 
-    public Long ejecutar(Incremento incremento) {
+    public DtoIncremento ejecutar(Incremento incremento) {
         double montoFinal = this.calcularMontoFinal.calcular(incremento.getFechaInicio(), incremento.getFechaFin(), incremento.getMontoInicial());
         incremento.setMontoFinal(montoFinal);
 
