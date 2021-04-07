@@ -2,7 +2,6 @@ package com.ceiba.incremento.servicio;
 
 import com.ceiba.incremento.excepcion.IncrementoExcepcion;
 import com.ceiba.incremento.modelo.dto.DtoIncremento;
-import com.ceiba.incremento.modelo.entidad.Incremento;
 import com.ceiba.incremento.puerto.dao.DaoIncremento;
 import com.ceiba.incremento.puerto.repositorio.RepositorioIncremento;
 

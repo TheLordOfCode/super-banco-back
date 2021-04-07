@@ -5,7 +5,6 @@ import com.ceiba.incremento.comando.fabrica.FabricaIncremento;
 import com.ceiba.incremento.modelo.dto.DtoIncremento;
 import com.ceiba.incremento.modelo.entidad.Incremento;
 import com.ceiba.incremento.servicio.ServicioActualizarIncremento;
-import com.ceiba.manejador.ManejadorComando;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,6 +1,5 @@
 package com.ceiba.incremento.servicio;
 
-import com.ceiba.BasePrueba;
 import com.ceiba.incremento.modelo.entidad.Incremento;
 import com.ceiba.incremento.puerto.repositorio.RepositorioDiasFestivos;
 import org.junit.Assert;

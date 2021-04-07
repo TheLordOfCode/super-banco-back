@@ -1,7 +1,6 @@
 package com.ceiba.incremento.consulta;
 
 import com.ceiba.incremento.modelo.dto.DtoIncremento;
-import com.ceiba.incremento.puerto.dao.DaoIncremento;
 import com.ceiba.incremento.servicio.ServicioObtenerIncremento;
 import org.springframework.stereotype.Component;
 
