@@ -6,7 +6,10 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Date;
 
 public class MapeoIncremento implements RowMapper<DtoIncremento>, MapperResult {
     @Override
@@ -17,6 +20,7 @@ public class MapeoIncremento implements RowMapper<DtoIncremento>, MapperResult {
         double montoInicial = resultSet.getDouble("montoInicial");
         double montoFinal = resultSet.getDouble("montoFinal");
 
-        return new DtoIncremento(id, fechaInicio, fechaIFin, montoInicial, montoFinal);
+        return new DtoIncremento(id, fechaInicio.toString(), fechaIFin.toString(), montoInicial, montoFinal);
     }
+
 }

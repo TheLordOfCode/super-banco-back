@@ -9,8 +9,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class DtoIncremento {
     private Long id;
-    private LocalDate fechaInicio;
-    private LocalDate fechaFin;
+    private String fechaInicio;
+    private String fechaFin;
     private Double montoInicial;
     private Double montoFinal;
 }

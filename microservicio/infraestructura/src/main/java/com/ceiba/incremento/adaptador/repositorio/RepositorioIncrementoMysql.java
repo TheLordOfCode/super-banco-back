@@ -29,7 +29,7 @@ public class RepositorioIncrementoMysql implements RepositorioIncremento {
     public DtoIncremento crear(Incremento incremento) {
         Long id = this.customNamedParameterJdbcTemplate.crear(incremento, sqlCrear);
         incremento.setId(id);
-        return new DtoIncremento(incremento.getId(), incremento.getFechaInicio(), incremento.getFechaFin(), incremento.getMontoInicial(), incremento.getMontoFinal());
+        return new DtoIncremento(incremento.getId(), incremento.getFechaInicio().toString(), incremento.getFechaFin().toString(), incremento.getMontoInicial(), incremento.getMontoFinal());
     }
 
     @Override
@@ -40,8 +40,10 @@ public class RepositorioIncrementoMysql implements RepositorioIncremento {
     }
 
     @Override
-    public void actualizar(Incremento incremento) {
+    public DtoIncremento actualizar(Incremento incremento) {
         this.customNamedParameterJdbcTemplate.actualizar(incremento, sqlActualizar);
+        return new DtoIncremento(incremento.getId(), incremento.getFechaInicio().toString(), incremento.getFechaFin().toString(), incremento.getMontoInicial(), incremento.getMontoFinal());
+
     }
 
     @Override

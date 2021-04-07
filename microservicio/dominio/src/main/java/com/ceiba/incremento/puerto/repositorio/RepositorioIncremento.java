@@ -18,7 +18,7 @@ public interface RepositorioIncremento {
      *
      * @param incremento
      */
-    void actualizar(Incremento incremento);
+    DtoIncremento actualizar(Incremento incremento);
 
     /**
      * Permite eliminar un incremento

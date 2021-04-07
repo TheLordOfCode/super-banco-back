@@ -45,9 +45,9 @@ public class ComandoControladorIncremento {
 
     @PutMapping(value = "/{id}")
     @ApiOperation("Actualizar Incremento")
-    public void actualizar(@RequestBody ComandoIncremento comandoIncremento, @PathVariable Long id) {
+    public  DtoIncremento actualizar(@RequestBody ComandoIncremento comandoIncremento, @PathVariable Long id) {
         comandoIncremento.setId(id);
-        manejadorActualizarIncremento.ejecutar(comandoIncremento);
+        return manejadorActualizarIncremento.ejecutar(comandoIncremento);
     }
 
 }

@@ -40,6 +40,7 @@ public class ComandoControladoIncrementoTest {
                 .content(objectMapper.writeValueAsString(incremento)))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'id': 201, 'fechaInicio': '2020-02-12', 'fechaFin': '2020-02-14', 'montoInicial': 50000.0 , 'montoFinal': 105125.0 }"));
+
     }
 
     //realizar consulta para verificar que el flujo se ejecuto correctamente manejo de assert
@@ -47,13 +48,15 @@ public class ComandoControladoIncrementoTest {
     public void actualizar() throws Exception {
         // arrange
         Long id = 200L;
-        ComandoIncremento incremento = new ComandoIncrementoTestDataBuilder().build();
+        double montoInicial = 60000;
+        ComandoIncremento incremento = new ComandoIncrementoTestDataBuilder().conMontoInicial(montoInicial).build();
 
         // act - assert
         mocMvc.perform(put("/incrementos/{id}", id)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(incremento)))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(content().json("{'id': 200, 'fechaInicio': '2020-02-12', 'fechaFin': '2020-02-14', 'montoInicial': 60000.0 , 'montoFinal': 126150.0 }"));
     }
 
     @Test
@@ -66,5 +69,6 @@ public class ComandoControladoIncrementoTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
+
     }
 }

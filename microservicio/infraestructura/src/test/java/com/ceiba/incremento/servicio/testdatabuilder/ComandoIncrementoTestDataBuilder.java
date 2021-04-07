@@ -15,10 +15,11 @@ public class ComandoIncrementoTestDataBuilder {
         montoInicial = 50000.00;
     }
 
-    public ComandoIncrementoTestDataBuilder conNombre(String nombre) {
-        this.fechaInicio = nombre;
+    public ComandoIncrementoTestDataBuilder conMontoInicial(Double montoInicial) {
+        this.montoInicial = montoInicial;
         return this;
     }
+
 
     public ComandoIncremento build() {
         return new ComandoIncremento(id, fechaInicio, fechaFin, montoInicial);

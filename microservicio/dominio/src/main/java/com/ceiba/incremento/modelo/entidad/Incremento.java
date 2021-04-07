@@ -27,13 +27,11 @@ public class Incremento {
     private static final int MONTO_MINIMO = 10000;
     private static final int CANTIDAD_MAXIMA_DIAS = 15;
 
-
     private Long id;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private double montoInicial;
     private double montoFinal;
-
 
     public Incremento(Long id, String fechaInicio, String fechaFin, double montoInicial) {
         validarFechaCorrecta(fechaInicio, LA_FECHA_DE_INICIO_ES_INVALIDA);
@@ -50,7 +48,7 @@ public class Incremento {
         validarMenor(fechaInicial, fechaFinal, LA_FECHA_FIN_ES_DESPUES_DE_LA_FECHA_INICIO);
         validarLapsoTiempo(fechaInicial, fechaFinal, CANTIDAD_MAXIMA_DIAS, LAPSO_DE_TIEMPO_MENOR_QUINCE_DIAS);
 
-        this.id = id;
+        this.id = id; // sobrecarga de funciones mediante el contructor
         this.fechaInicio = fechaInicial;
         this.fechaFin = fechaFinal;
         this.montoInicial = montoInicial;
