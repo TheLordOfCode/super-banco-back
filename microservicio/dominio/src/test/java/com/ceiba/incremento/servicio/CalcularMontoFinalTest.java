@@ -32,10 +32,8 @@ public class CalcularMontoFinalTest {
 
         Mockito.when(repositorioDiasFestivos.contarFestivos(
                 Incremento.obtenerLocalDateDesdeUnString(FECHA_INICIAL), DIAS_LAPSO)).thenReturn(DIAS_FESTIVO);
-
         Double montoFinal = calcularMontoFinal.calcular(Incremento.obtenerLocalDateDesdeUnString(FECHA_INICIAL),
                 Incremento.obtenerLocalDateDesdeUnString(FECHA_FINAL), VALOR_MONTO_INICIAL);
-
         Assert.assertEquals(montoFinal, VALOR_MONTO_FINAL);
 
     }
